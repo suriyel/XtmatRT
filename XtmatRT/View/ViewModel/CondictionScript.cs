@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TestStack.White.UIItems;
+
 
 namespace XtmatRT
 {
-    internal class CaseScript:ICloneable  
+    internal class CondictionScriptVM:ICloneable
     {
         public Guid Id { set; get; }
-        public List<ControlScript> ControlScripts { set; get; }
 
-        public CaseScript()
+        public CondictionType Type { set; get; }
+
+        public string Paremter { set; get; }
+
+        public CondictionScriptVM()
         {
             Id = Guid.NewGuid();
         }
 
         public object Clone()
         {
-            return new CaseScript()
+            return new CondictionScriptVM()
                 {
                     Id = this.Id,
-                    ControlScripts = this.ControlScripts.Select(c => c.Clone() as ControlScript).ToList()
+                    Type = this.Type,
+                    Paremter = this.Paremter
                 };
         }
     }

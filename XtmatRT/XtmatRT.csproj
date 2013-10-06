@@ -38,10 +38,26 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TestStack.White">
+      <HintPath>..\..\White\src\TestStack.White\bin\Debug\TestStack.White.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Model\CaseScript.cs" />
+    <Compile Include="Model\CondictionScript.cs" />
+    <Compile Include="Model\ControlScript.cs" />
+    <Compile Include="Model\MethodScript.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ViewModel\CaseScript.cs" />
+    <Compile Include="View\ViewModel\CondictionScript.cs" />
+    <Compile Include="View\ViewModel\ControlScript.cs" />
+    <Compile Include="View\ViewModel\MethodScript.cs" />
+    <Compile Include="XMethod\IMethodScript.cs" />
+    <Compile Include="XMethod\WindowScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Core\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

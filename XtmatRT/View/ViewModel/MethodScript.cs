@@ -2,26 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TestStack.White.UIItems;
 
 namespace XtmatRT
 {
-    internal class CaseScript:ICloneable  
+    internal class MethodScriptVM:ICloneable
     {
         public Guid Id { set; get; }
-        public List<ControlScript> ControlScripts { set; get; }
 
-        public CaseScript()
+        public IMethodScript Method { set; get; }
+
+        public int Index { set; get; }
+
+        public MethodScriptVM()
         {
             Id = Guid.NewGuid();
         }
 
         public object Clone()
         {
-            return new CaseScript()
+            return new MethodScriptVM()
                 {
                     Id = this.Id,
-                    ControlScripts = this.ControlScripts.Select(c => c.Clone() as ControlScript).ToList()
+                    Method = this.Method.Clone() as IMethodScript,
+                    Index = this.Index
                 };
         }
     }

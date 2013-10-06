@@ -6,22 +6,24 @@ using TestStack.White.UIItems;
 
 namespace XtmatRT
 {
-    internal class CaseScript:ICloneable  
+    internal class CaseScriptVM:ICloneable
     {
         public Guid Id { set; get; }
-        public List<ControlScript> ControlScripts { set; get; }
 
-        public CaseScript()
+        public List<ControlScriptVM> ControlScripts { set; get; }
+
+        public CaseScriptVM()
         {
             Id = Guid.NewGuid();
+            ControlScripts = new List<ControlScriptVM>();
         }
 
         public object Clone()
         {
-            return new CaseScript()
+            return new CaseScriptVM()
                 {
                     Id = this.Id,
-                    ControlScripts = this.ControlScripts.Select(c => c.Clone() as ControlScript).ToList()
+                    ControlScripts = this.ControlScripts.Select(cs => cs.Clone() as ControlScriptVM).ToList()
                 };
         }
     }

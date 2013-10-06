@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XtmatRT
 {
-    internal class MethodScript
+    internal class MethodScript:ICloneable
     {
         public Guid Id { set; get; }
 
@@ -13,5 +13,19 @@ namespace XtmatRT
 
         public int Index { set; get; }
 
+        public MethodScript()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public object Clone()
+        {
+            return new MethodScript()
+                {
+                    Id = this.Id,
+                    MethodID = this.MethodID,
+                    Index = this.Index
+                };
+        }
     }
 }

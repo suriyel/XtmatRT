@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XtmatRT", "XtmatRT\XtmatRT.csproj", "{0C7C47F0-A889-4830-9CEF-B54554D6B830}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{EBF20A6E-C091-4232-BB69-B6AA671AD2EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{0C7C47F0-A889-4830-9CEF-B54554D6B830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C7C47F0-A889-4830-9CEF-B54554D6B830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C7C47F0-A889-4830-9CEF-B54554D6B830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF20A6E-C091-4232-BB69-B6AA671AD2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF20A6E-C091-4232-BB69-B6AA671AD2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF20A6E-C091-4232-BB69-B6AA671AD2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF20A6E-C091-4232-BB69-B6AA671AD2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
