@@ -52,7 +52,6 @@
   <ItemGroup>
     <Compile Include="AnalyseTest.cs" />
     <Compile Include="GetAllControlsTest.cs" />
-    <Compile Include="MethodsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,14 +59,6 @@
       <Project>{0C7C47F0-A889-4830-9CEF-B54554D6B830}</Project>
       <Name>XtmatRT</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Config.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MethodDll.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
