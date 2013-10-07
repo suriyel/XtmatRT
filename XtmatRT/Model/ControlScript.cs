@@ -5,21 +5,22 @@ using System.Text;
 
 namespace XtmatRT
 {
-    internal class ControlScript:ICloneable
+    public class ControlScript:ICloneable
     {
         public Guid Id { set; get; }
 
         public int Index { set; get; }
 
-        public string BaseControlCondictionScrID { set; get; }
+        public Guid BaseControlCondictionScrID { set; get; }
 
         public CondictionScript CreatCondiction { set; get; }
 
-        public List<MethodScript> CaseScript { set; get; }
+        public List<MethodScript> MethodScripts { set; get; }
 
         public ControlScript()
         {
             Id = Guid.NewGuid();
+            MethodScripts = new List<MethodScript>();
         }
 
         public object Clone()
@@ -30,7 +31,7 @@ namespace XtmatRT
                     Index = this.Index,
                     BaseControlCondictionScrID = this.BaseControlCondictionScrID,
                     CreatCondiction = this.CreatCondiction.Clone() as CondictionScript,
-                    CaseScript = this.CaseScript.Select(cs => cs.Clone() as MethodScript).ToList()
+                    MethodScripts = this.MethodScripts.Select(cs => cs.Clone() as MethodScript).ToList()
                 };
         }
     }

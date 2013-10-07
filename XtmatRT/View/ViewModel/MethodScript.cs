@@ -9,7 +9,7 @@ namespace XtmatRT
     {
         public Guid Id { set; get; }
 
-        public IMethodScript Method { set; get; }
+        public MethodScript Method { set; get; }
 
         public int Index { set; get; }
 
@@ -23,7 +23,7 @@ namespace XtmatRT
             return new MethodScriptVM()
                 {
                     Id = this.Id,
-                    Method = this.Method.Clone() as IMethodScript,
+                    Method = this.Method.Clone() as MethodScript,
                     Index = this.Index
                 };
         }

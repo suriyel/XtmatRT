@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XtmatRT
 {
-    internal class MethodScript:ICloneable
+    public class MethodScript:ICloneable
     {
         public Guid Id { set; get; }
 
